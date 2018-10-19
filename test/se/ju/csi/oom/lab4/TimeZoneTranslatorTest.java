@@ -19,7 +19,7 @@ public class TimeZoneTranslatorTest {
 		//fail("Not yet implemented");
 		DateTime date = new DateTime(2018, 12, 31, 23, 0, 0);
 		
-		//%04d-%02d-%02d %02d:%02d:%02d string format
+		//%04d-%02d-%02d %02d:%02d:%02d string format.
 		String stringDate = "2019-01-01 01:00:00";
 		
 		DateTime dateString = new DateTime("2019-01-01 01:00:00");
