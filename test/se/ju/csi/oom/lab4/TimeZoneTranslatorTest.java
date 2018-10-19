@@ -22,9 +22,11 @@ public class TimeZoneTranslatorTest {
 		//%04d-%02d-%02d %02d:%02d:%02d string format
 		String stringDate = "2019-01-01 01:00:00";
 		
+		DateTime dateString = new DateTime("2019-01-01 01:00:00");
+		
 		date = TimeZoneTranslator.shiftTimeZone(date, 0, 2);
 		
-		
+		assertEquals(stringDate, dateString.toString());
 		assertEquals(stringDate, date.toString());
 	}
 
