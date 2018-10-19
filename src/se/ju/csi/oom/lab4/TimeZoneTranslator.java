@@ -11,51 +11,49 @@ public class TimeZoneTranslator {
 		int gmtHour = inputHour + fromOffset;
 		int targetHour = gmtHour + toOffset;
 		
-		int inputDay = inputDate.getDay();
-		int inputMonth = inputDate.getMonth();
-		int inputYear = inputDate.getYear();
+		int targetDay = inputDate.getDay();
+		int targetMonth = inputDate.getMonth();
+		int targetYear = inputDate.getYear();
 		
-		if(targetHour >= 24) {
-			if(inputDay == 31) {
-				inputDay = 1;
-				if(inputMonth == 12) {
-					inputYear++;
-					inputMonth = 1;
+		if(targetHour >= 24) 
+		{
+			if(targetDay == 31) 
+			{
+				targetDay = 1;
+				if(targetMonth == 12) 
+				{
+					targetYear++;
+					targetMonth = 1;
 				}
 				else
-					inputMonth++;
+					targetMonth++;
 			}
 			else
-				inputDay++;
+				targetDay++;
 			
 			targetHour = targetHour - 24;
 		}
 		if(targetHour < 0) 
 		{
-			if(inputDay == 1) 
+			if(targetDay == 1) 
 			{
-				inputDay = 31;
-				if(inputMonth == 1) 
+				targetDay = 31;
+				if(targetMonth == 1) 
 				{
-					inputYear--;
-					inputMonth = 12;
+					targetYear--;
+					targetMonth = 12;
 				}
 				else
-					inputMonth--;
+					targetMonth--;
 		}
 			else
-				inputDay--;
+				targetDay--;
 			targetHour = 24 + targetHour;
 		}
-		//month
-		
-		//year
 
-		
-		
-		DateTime targetDateTime = new DateTime(inputYear, 
-				inputMonth, 
-				inputDay, 
+		DateTime targetDateTime = new DateTime(targetYear, 
+				targetMonth, 
+				targetDay, 
 				targetHour, 
 				inputDate.getMinute(), 
 				inputDate.getSecond());
