@@ -58,7 +58,7 @@ public class TimeZoneTranslator {
 		
 		DateTime targetDateTime = new DateTime(targetYear, 
 				targetMonth, 
-				targetDay, 
+				target	Day, 
 				targetHour, 
 				inputDate.getMinute(), 
 				inputDate.getSecond());
