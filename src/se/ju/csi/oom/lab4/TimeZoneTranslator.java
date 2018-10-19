@@ -50,15 +50,10 @@ public class TimeZoneTranslator {
 				targetDay--;
 			targetHour = 24 + targetHour;
 		}
-		//month
-		
-		//year
 
-		
-		
 		DateTime targetDateTime = new DateTime(targetYear, 
 				targetMonth, 
-				target	Day, 
+				targetDay, 
 				targetHour, 
 				inputDate.getMinute(), 
 				inputDate.getSecond());
